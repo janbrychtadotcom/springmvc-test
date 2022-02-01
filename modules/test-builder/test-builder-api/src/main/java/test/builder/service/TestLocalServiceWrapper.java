@@ -1,0 +1,60 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package test.builder.service;
+
+import com.liferay.portal.kernel.service.ServiceWrapper;
+
+/**
+ * Provides a wrapper for {@link TestLocalService}.
+ *
+ * @author Brian Wing Shun Chan
+ * @see TestLocalService
+ * @generated
+ */
+public class TestLocalServiceWrapper
+	implements ServiceWrapper<TestLocalService>, TestLocalService {
+
+	public TestLocalServiceWrapper(TestLocalService testLocalService) {
+		_testLocalService = testLocalService;
+	}
+
+	/**
+	 * Returns the OSGi service identifier.
+	 *
+	 * @return the OSGi service identifier
+	 */
+	@Override
+	public String getOSGiServiceIdentifier() {
+		return _testLocalService.getOSGiServiceIdentifier();
+	}
+
+	@Override
+	public String testMethod() {
+		return _testLocalService.testMethod();
+	}
+
+	@Override
+	public TestLocalService getWrappedService() {
+		return _testLocalService;
+	}
+
+	@Override
+	public void setWrappedService(TestLocalService testLocalService) {
+		_testLocalService = testLocalService;
+	}
+
+	private TestLocalService _testLocalService;
+
+}

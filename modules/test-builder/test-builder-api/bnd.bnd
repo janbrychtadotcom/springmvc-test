@@ -1,0 +1,7 @@
+Bundle-Name: test-builder-api
+Bundle-SymbolicName: test.builder.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	test.builder.service
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../test-builder-service/service.xml
